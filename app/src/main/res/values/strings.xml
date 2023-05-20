@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Firebase</string>
+    <string name="Logdetails">Please fill the details below to continue</string>
+    <string name="signdetails">Please fill the details below to Create your Account</string>
+    <string name="log_message">We are Glad to have you back..!!</string>
+    <string name="Welcome2">Welcome Back..!!</string>
+    <string name="message"> Thank You for using our Application.\nThis Application is currently in Development. \n Please Provide feedback and report any bugs to the developer  </string>
+</resources>
