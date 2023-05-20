@@ -224,8 +224,9 @@ String str = name.getText().toString();
 
                             } else {
                                 // If sign in fails, display a message to the user.
-                                Toast.makeText(MainActivity.this, "SignUp Failed!!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainActivity.this, "SignUp Failed!!,\nPlease make sure that You have connected to the Internet!!", Toast.LENGTH_SHORT).show();
                                 progressBar.setVisibility(View.GONE);
+
 
                             }
                         }
@@ -251,11 +252,12 @@ String str = name.getText().toString();
         else if (checked[0] == 0) {
             Toast.makeText(MainActivity.this, "Please Accept our Terms And Conditions.", Toast.LENGTH_SHORT).show();
 //                    Log.e("error", "onClick: Button is not working properly.." );
-//            progressBar.setVisibility(View.GONE);
+            progressBar.setVisibility(View.GONE);
 
 
         }
         else {
+            progressBar.setVisibility(View.GONE);
             Toast.makeText(this, "Please Enter all the fields!!", Toast.LENGTH_SHORT).show();
         }
     }

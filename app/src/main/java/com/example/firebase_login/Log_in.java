@@ -136,59 +136,65 @@ public class Log_in extends AppCompatActivity {
 
 
     }
-    public void login(View view){
+    public void login(View view) {
 //        Check box Checking && Name checking
 
+        boolean flag = true;
         String key = Pass.getText().toString();
-        String mail = email.getText().toString();
 
         progressBar.setVisibility(View.VISIBLE);
-//        handler = new dbHandler(this,"U",null,1);
-//        if (handler.chkemailpass(mail,key)==false){         // Password checking
-//            Toast.makeText(this, "User Not Found..", Toast.LENGTH_SHORT).show();
-//        }
-//        else if (checked[0] == 1 && handler.chkemailpass(mail,key)==true) {
-//
-//            Toast.makeText(Log_In.this, "Logging in..", Toast.LENGTH_SHORT).show();
-//                    Log.d("btn", "onClick: Button is working properly..");
-//            Intent home = new Intent(getApplicationContext(),HomePage.class);
-//
-//            startActivity(home);
-//        } else if (checked[0] == 0) {
-//            Toast.makeText(Log_In.this, "Please Accept our Terms And Conditions.", Toast.LENGTH_SHORT).show();
-//                    Log.e("error", "onClick: Button is not working properly.." );
+
+        String mail = email.getText().toString();
+        // Email Validation
+
+        boolean mailchk = false;
+
+        if (!mail.isEmpty() && Patterns.EMAIL_ADDRESS.matcher(mail).matches()) {
+            mailchk = true;
+        } else {
+            mailchk = false;
+//            progressBar.setVisibility(View.GONE);
+        }
 
 
-        mAuth.signInWithEmailAndPassword(mail, key)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        progressBar.setVisibility(View.GONE);
-                        if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
-                            Toast.makeText(Log_in.this, "Login Successful!!", Toast.LENGTH_SHORT).show();
-                            Intent home=new Intent(getApplicationContext(),Homepage.class);
-                            startActivity(home);
-                            finish();
+        if (checked[0] == 1 && flag && mailchk) {
+
+
+            mAuth.signInWithEmailAndPassword(mail, key)
+                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
                             progressBar.setVisibility(View.GONE);
+                            if (task.isSuccessful()) {
+                                // Sign in success, update UI with the signed-in user's information
+                                Toast.makeText(Log_in.this, "Login Successful!!", Toast.LENGTH_SHORT).show();
+                                Intent home = new Intent(getApplicationContext(), Homepage.class);
+                                startActivity(home);
+                                finish();
+                                progressBar.setVisibility(View.GONE);
 
-                        } else {
-                            // If sign in fails, display a message to the user.
+                            } else {
+                                // If sign in fails, display a message to the user.
 
-                            Toast.makeText(Log_in.this, "User Not Found..",
-                                    Toast.LENGTH_SHORT).show();
-                            progressBar.setVisibility(View.GONE);
+                                Toast.makeText(Log_in.this, "User Not Found..",
+                                        Toast.LENGTH_SHORT).show();
+                                progressBar.setVisibility(View.GONE);
 
+                            }
                         }
-                    }
-                });
+                    });
+        }
+        else
+        {
+            Toast.makeText(this, "Please Enter all Fields..", Toast.LENGTH_SHORT).show();
+        }
 
 
         }
-    public void signup(View v) {
-        Intent act2 = new Intent(this, MainActivity.class);
-        startActivity(act2);
-        finish();
-    }
+        public void signup (View v){
+            Intent act2 = new Intent(this, MainActivity.class);
+            startActivity(act2);
+            finish();
+        }
     }
 

@@ -99,6 +99,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/email"
                     android:paddingEnd="50dp"
+
                     android:background="@drawable/input"
                     android:textColorHint="@color/primary"
                      />
