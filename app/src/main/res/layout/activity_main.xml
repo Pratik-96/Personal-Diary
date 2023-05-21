@@ -15,6 +15,8 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+
+
         <TextView
             android:elevation="10dp"
             android:id="@+id/title"
@@ -27,6 +29,7 @@
             android:textColor="@color/primary"
             android:textSize="23sp"
             android:textStyle="bold" />
+
 
         <TextView
             android:id="@+id/textView2"
