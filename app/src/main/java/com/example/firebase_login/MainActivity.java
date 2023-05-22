@@ -40,6 +40,7 @@ CheckBox chkbox;
 
 ProgressBar progressBar;
 
+Button button;
 FirebaseAuth mAuth;
 
 TextInputLayout passly,mailly,cnfpassly;
@@ -76,6 +77,7 @@ TextInputLayout passly,mailly,cnfpassly;
         chkbox.setText(Html.fromHtml(txt));
         String txt2 = "<b>Already have an account ? <a href=''>Log In</a></b>";
         reg.setText(Html.fromHtml(txt2));
+        button=findViewById(R.id.button);
         chkbox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
@@ -176,7 +178,7 @@ TextInputLayout passly,mailly,cnfpassly;
         boolean flag = true;
         String key = Pass1.getText().toString();
         String key2 = Pass2.getText().toString();
-        progressBar.setVisibility(View.VISIBLE);
+       inProgress(true);
         if (!key.equals(key2)) {         // Password checking
             flag = false;
 //            progressBar.setVisibility(View.GONE);
@@ -211,7 +213,7 @@ String str = name.getText().toString();
                     .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
-                            progressBar.setVisibility(View.GONE);
+
 
                             if (task.isSuccessful()) {
                                 // Sign in success, update UI with the signed-in user's information
@@ -219,14 +221,12 @@ String str = name.getText().toString();
                                 Intent home = new Intent(getApplicationContext(), Log_in.class);
                                 startActivity(home);
                                 finish();
-                                progressBar.setVisibility(View.GONE);
-
+                                inProgress(false);
 
                             } else {
                                 // If sign in fails, display a message to the user.
-                                Toast.makeText(MainActivity.this, "SignUp Failed!!,\nPlease make sure that You have connected to the Internet!!", Toast.LENGTH_SHORT).show();
-                                progressBar.setVisibility(View.GONE);
-
+                                Toast.makeText(MainActivity.this, task.getException().getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                                inProgress(false);
 
                             }
                         }
@@ -252,13 +252,31 @@ String str = name.getText().toString();
         else if (checked[0] == 0) {
             Toast.makeText(MainActivity.this, "Please Accept our Terms And Conditions.", Toast.LENGTH_SHORT).show();
 //                    Log.e("error", "onClick: Button is not working properly.." );
-            progressBar.setVisibility(View.GONE);
+
+            inProgress(true);
+
 
 
         }
         else {
+            button.setVisibility(View.GONE);
+            progressBar.setVisibility(View.VISIBLE);
             progressBar.setVisibility(View.GONE);
             Toast.makeText(this, "Please Enter all the fields!!", Toast.LENGTH_SHORT).show();
+            button.setVisibility(View.VISIBLE);
+        }
+    }
+    public void inProgress(boolean progress)
+    {
+        if (progress)
+        {
+            progressBar.setVisibility(View.VISIBLE);
+            button.setVisibility(View.GONE);
+        }
+        else
+        {
+            progressBar.setVisibility(View.GONE);
+            button.setVisibility(View.VISIBLE);
         }
     }
 

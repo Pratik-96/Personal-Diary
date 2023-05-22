@@ -136,14 +136,27 @@ public class Log_in extends AppCompatActivity {
 
 
     }
+    public void inProgress(boolean progress)
+    {
+        if (progress)
+        {
+            progressBar.setVisibility(View.VISIBLE);
+            login.setVisibility(View.GONE);
+        }
+        else
+        {
+            progressBar.setVisibility(View.GONE);
+            login.setVisibility(View.VISIBLE);
+        }
+    }
+
     public void login(View view) {
 //        Check box Checking && Name checking
 
         boolean flag = true;
         String key = Pass.getText().toString();
 
-        progressBar.setVisibility(View.VISIBLE);
-
+       inProgress(true);
         String mail = email.getText().toString();
         // Email Validation
 
@@ -164,21 +177,21 @@ public class Log_in extends AppCompatActivity {
                     .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
-                            progressBar.setVisibility(View.GONE);
-                            if (task.isSuccessful()) {
+                                inProgress(false);
+                                if (task.isSuccessful()) {
                                 // Sign in success, update UI with the signed-in user's information
                                 Toast.makeText(Log_in.this, "Login Successful!!", Toast.LENGTH_SHORT).show();
                                 Intent home = new Intent(getApplicationContext(), Homepage.class);
                                 startActivity(home);
                                 finish();
-                                progressBar.setVisibility(View.GONE);
+                                inProgress(false);
 
                             } else {
                                 // If sign in fails, display a message to the user.
 
-                                Toast.makeText(Log_in.this, "Login Failed..",
+                                Toast.makeText(Log_in.this, task.getException().getLocalizedMessage(),
                                         Toast.LENGTH_SHORT).show();
-                                progressBar.setVisibility(View.GONE);
+
 
                             }
                         }
@@ -191,6 +204,7 @@ public class Log_in extends AppCompatActivity {
 
 
         }
+
         public void signup (View v){
             Intent act2 = new Intent(this, MainActivity.class);
             startActivity(act2);

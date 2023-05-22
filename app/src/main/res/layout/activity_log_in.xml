@@ -168,12 +168,7 @@
                 android:textColorHint="@color/black"
                 android:textSize="15sp"
                 android:textStyle="bold" />
-            <ProgressBar
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/progressBar"
-                android:visibility="gone"
-                android:layout_gravity="center"/>
+
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/button"
                 android:layout_width="wrap_content"
@@ -191,7 +186,17 @@ android:onClick="login"
                 android:textStyle="bold"
                 android:textAllCaps="true"
                 android:textColor="@color/white"
-                android:textSize="15sp"/>
+                android:textSize="15sp">
+
+            </androidx.appcompat.widget.AppCompatButton>
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBar"
+                android:visibility="gone"
+                android:layout_marginTop="40dp"
+                android:indeterminateTint="@color/primary"
+                android:layout_gravity="center"/>
 
 
             <TextView
@@ -200,6 +205,7 @@ android:onClick="login"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 android:textAlignment="center"
+                android:layout_marginTop="20dp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:fontFamily="serif"

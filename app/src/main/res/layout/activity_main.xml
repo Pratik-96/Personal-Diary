@@ -227,12 +227,7 @@
             android:textSize="15sp"
             android:textStyle="bold"/>
 
-        <ProgressBar
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/progressBar"
-            android:visibility="gone"
-            android:layout_gravity="center"/>
+
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button"
@@ -252,12 +247,21 @@
             android:textAllCaps="true"
             android:textColor="@color/white"
             android:textSize="15sp"/>
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar"
+            android:visibility="gone"
+            android:layout_marginTop="20dp"
+            android:indeterminateTint="@color/primary"
+            android:layout_gravity="center"/>
 
         <TextView
             android:id="@+id/noacc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=""
+            android:layout_marginTop="20dp"
             android:textColorLink="@color/primary"
             android:fontFamily="serif"
             android:onClick="register"
