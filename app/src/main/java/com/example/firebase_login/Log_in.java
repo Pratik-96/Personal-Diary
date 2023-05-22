@@ -176,7 +176,7 @@ public class Log_in extends AppCompatActivity {
                             } else {
                                 // If sign in fails, display a message to the user.
 
-                                Toast.makeText(Log_in.this, "User Not Found..",
+                                Toast.makeText(Log_in.this, "Login Failed..",
                                         Toast.LENGTH_SHORT).show();
                                 progressBar.setVisibility(View.GONE);
 
