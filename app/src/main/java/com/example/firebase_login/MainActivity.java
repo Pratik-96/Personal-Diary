@@ -262,7 +262,7 @@ String str = name.getText().toString();
             button.setVisibility(View.GONE);
             progressBar.setVisibility(View.VISIBLE);
             progressBar.setVisibility(View.GONE);
-            Toast.makeText(this, "Please Enter all the fields!!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please Enter all the fields Correctly!!", Toast.LENGTH_SHORT).show();
             button.setVisibility(View.VISIBLE);
         }
     }

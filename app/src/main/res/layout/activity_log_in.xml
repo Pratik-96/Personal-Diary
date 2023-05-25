@@ -71,7 +71,6 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginStart="20dp"
                 android:background="@drawable/input"
-                android:clipToPadding="false"
                 android:elevation="10dp"
                 android:hint="Email"
                 app:boxStrokeColor="@color/primary"
@@ -95,11 +94,11 @@
                 >
 
                 <EditText
+                    android:inputType="textEmailAddress"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/email"
                     android:paddingEnd="50dp"
-
                     android:background="@drawable/input"
                     android:textColorHint="@color/primary"
                      />
@@ -138,6 +137,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/password"
+                    android:inputType="textPassword"
                     android:background="@drawable/input"
                     android:paddingEnd="50dp"
                     android:textColorHint="@color/primary" />

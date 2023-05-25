@@ -90,6 +90,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:id="@+id/name"
+                android:inputType="textPersonName"
                 android:background="@drawable/input"
                 android:layout_height="wrap_content"
                 />
@@ -126,6 +127,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/email"
+                android:inputType="textEmailAddress"
                 android:paddingEnd="50dp"
                 android:background="@drawable/input"
                 android:textColorHint="@color/primary"
@@ -167,7 +169,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/password"
                 android:paddingEnd="50dp"
-
+                android:inputType="textPassword"
                 android:background="@drawable/input"
                 android:textColorHint="@color/primary" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -204,6 +206,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:id="@+id/cnfpass"
+                android:inputType="textPassword"
                 android:background="@drawable/input"
                 android:paddingEnd="50dp"
 
