@@ -10,6 +10,7 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:elevation="10dp"
         android:id="@+id/title"
         >
         <TextView
@@ -42,15 +43,6 @@
 
 
     </RelativeLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center"
-
-        >
-
-    </LinearLayout>
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -70,11 +62,11 @@
         android:layout_marginBottom="10dp"
         android:textSize="20sp"
         android:id="@+id/nodata"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
         android:layout_below="@id/nodata"
         />
 
@@ -90,7 +82,7 @@
         android:layout_marginEnd="20dp"
         android:elevation="100dp"
         android:layout_marginBottom="40dp"
-        android:backgroundTint="@color/primary"
+        android:backgroundTint="@color/white"
         android:clickable="true"
         app:srcCompat="@drawable/baseline_add_24" />
 </RelativeLayout>

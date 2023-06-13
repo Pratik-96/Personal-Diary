@@ -44,6 +44,9 @@ public class Note extends AppCompatActivity {
         save.setOnClickListener((view -> saveNote()));
         pageTitle=findViewById(R.id.pageTitle);
         delete=findViewById(R.id.delete);
+
+
+
         newPageTitle = getIntent().getStringExtra("title");
         content = getIntent().getStringExtra("content");
         docId = getIntent().getStringExtra("docId");
