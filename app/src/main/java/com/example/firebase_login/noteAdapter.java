@@ -29,7 +29,9 @@ Context context;
         holder.title.setText(model.TITLE);
         holder.content.setText(model.CONTEXT);
         getItemCount();
-        holder.timestamp.setText(Utility.timestampToString(model.timestamp));
+
+
+      holder.timestamp.setText(Utility.timestampToString(model.timestamp));
         holder.itemView.setOnClickListener((view ->
         {
             Intent intent = new Intent(context,Note.class);
@@ -53,11 +55,12 @@ Context context;
     class viewHolder extends RecyclerView.ViewHolder{
 
     TextView title,content,timestamp;
+
     public viewHolder(@NonNull View itemView) {
         super(itemView);
         title=itemView.findViewById(R.id.title);
         content=itemView.findViewById(R.id.content);
-        timestamp=itemView.findViewById(R.id.timestamp);
+  timestamp=itemView.findViewById(R.id.timestamp);
 
     }
 

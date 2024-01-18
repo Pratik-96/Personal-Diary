@@ -1,9 +1,11 @@
 package com.example.firebase_login;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.icu.text.SimpleDateFormat;
 import android.os.Bundle;
@@ -15,6 +17,8 @@ import android.widget.TextView;
 
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.firebase.ui.firestore.SnapshotParser;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.google.android.material.dialog.MaterialDialogs;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -59,13 +63,13 @@ public class Homepage extends AppCompatActivity {
 
         if (hrs>=1 && hrs<=12)
         {
-            homepageTitle.setText("Good Morning!!");
+            nodata.setText("Good Morning!!");
         } else if (hrs>12 && hrs<=16) {
-            homepageTitle.setText("Good Afternoon!!");
+            nodata.setText("Good Afternoon!!");
         }
         else
         {
-            homepageTitle.setText("Good Evening!!");
+            nodata.setText("Good Evening!!");
         }
         addNote.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,9 +80,11 @@ public class Homepage extends AppCompatActivity {
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mAuth.signOut();
-                startActivity(new Intent(getApplicationContext(), Log_in.class));
-                finish();
+
+                                mAuth.signOut();
+                                startActivity(new Intent(getApplicationContext(), Log_in.class));
+                                finish();
+
             }
         });  //Logout User
 
@@ -90,9 +96,11 @@ public class Homepage extends AppCompatActivity {
 
         Query query = Utility.getCollectionRef().orderBy("timestamp", Query.Direction.DESCENDING);
         FirestoreRecyclerOptions<noteModel> options = new FirestoreRecyclerOptions.Builder<noteModel>().setQuery(query, noteModel.class).build();
-        layoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
+//        layoutManager = new LinearLayoutManager(this);
+//        recyclerView.setLayoutManager(layoutManager);
 
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getApplicationContext(),2,GridLayoutManager.VERTICAL,false);
+        recyclerView.setLayoutManager(gridLayoutManager);
         noteAdapter = new noteAdapter(options, this);
 
         recyclerView.setAdapter(noteAdapter);

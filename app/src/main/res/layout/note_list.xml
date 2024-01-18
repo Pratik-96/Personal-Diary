@@ -1,23 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
     android:elevation="10dp"
-    android:backgroundTint="@color/white"
+    android:backgroundTint="#CCFFFFFF"
     android:theme="@style/AppTheme.NoForceDark"
     android:background="@drawable/round_note">
 
-    <TextView
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
         android:id="@+id/title"
         android:text="title"
-        android:fontFamily="serif"
+        android:fontFamily="@font/sarabun"
         android:layout_margin="15dp"
-        android:textColor="@color/primary"
+        android:textColor="@color/black"
         android:textStyle="bold"
 
         />
@@ -25,25 +34,28 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_marginStart="5dp"
-        android:fontFamily="serif"
+        android:fontFamily="@font/sarabun"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:text="Content"
         android:id="@+id/content"
         android:maxLines="2"
-        android:textColor="@color/primary"
+        android:textColor="@color/black"
         android:ellipsize="end"
         android:textSize="18sp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="12sp"
-        android:textColor="@color/primary"
+        android:textColor="@color/black"
         android:text="timestamp"
         android:gravity="right"
-        android:fontFamily="serif"
+        android:fontFamily="@font/sarabun"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="5dp"
         android:id="@+id/timestamp"/>
+        </LinearLayout>
+
+
 
 </LinearLayout>
