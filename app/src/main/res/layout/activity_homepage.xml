@@ -74,7 +74,7 @@
             android:layout_marginBottom="10dp"
             android:fontFamily="@font/script"
 
-            android:text="Let's Create some Notes.."
+            android:text="Let's go..!!"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
