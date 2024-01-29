@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "1046793026552",
-    "project_id": "personal-diary-8fa26",
-    "storage_bucket": "personal-diary-8fa26.appspot.com"
+    "project_number": "384307389034",
+    "project_id": "memoir-ea8c6",
+    "storage_bucket": "memoir-ea8c6.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1046793026552:android:1e6485733434bc9b3fb40d",
+        "mobilesdk_app_id": "1:384307389034:android:26c2d666641c4d4c13e013",
         "android_client_info": {
           "package_name": "com.example.firebase_login"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDaghgNQ81N-E-bbTxjO2TorOoQPAhTu58"
+          "current_key": "AIzaSyBoqCoMqGuTzy6lHSjqcYYaq0D14yLMe6I"
         }
       ],
       "services": {
