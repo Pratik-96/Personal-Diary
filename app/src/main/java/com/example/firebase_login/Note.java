@@ -3,6 +3,10 @@ package com.example.firebase_login;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.RenderEffect;
+import android.graphics.Shader;
+import android.icu.text.SimpleDateFormat;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.view.View;
@@ -11,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.firebase_login.databinding.ActivityNoteBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.Timestamp;
@@ -18,9 +23,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import java.sql.Date;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 public class Note extends AppCompatActivity {
@@ -33,6 +37,8 @@ public class Note extends AppCompatActivity {
     boolean isEditMode=false;
     String newPageTitle,content,docId;
 
+    ActivityNoteBinding binding;
+
     FirebaseFirestore firestore;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +50,7 @@ public class Note extends AppCompatActivity {
         save.setOnClickListener((view -> saveNote()));
         pageTitle=findViewById(R.id.pageTitle);
         delete=findViewById(R.id.delete);
+
 
 
 
@@ -98,9 +105,12 @@ public class Note extends AppCompatActivity {
             return;
         }
         noteModel noteModel = new noteModel();
+        android.icu.text.SimpleDateFormat ts = new SimpleDateFormat("dd/MM/yyyy");
+        java.util.Date date = new Date();
+        String timestamp = ts.format(date);
         noteModel.setTITLE(Title);
         noteModel.setCONTEXT(Context);
-       noteModel.setTimestamp(Timestamp.now());
+       noteModel.setTimestamp(timestamp);
 
         saveToDB(noteModel);
 

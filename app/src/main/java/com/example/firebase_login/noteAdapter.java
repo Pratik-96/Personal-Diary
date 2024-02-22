@@ -31,7 +31,7 @@ Context context;
         getItemCount();
 
 
-      holder.timestamp.setText(Utility.timestampToString(model.timestamp));
+      holder.timestamp.setText((model.timestamp));
         holder.itemView.setOnClickListener((view ->
         {
             Intent intent = new Intent(context,Note.class);

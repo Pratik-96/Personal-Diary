@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     android:theme="@style/AppTheme.NoForceDark"
     tools:context=".Log_in">
 
@@ -31,7 +32,7 @@
                 android:textStyle="bold"
                 android:layout_marginLeft="32dp"
                 android:layout_marginTop="20dp"
-                android:textColor="@color/primary"
+                android:textColor="@color/white"
                 android:fontFamily="serif"
                 android:textSize="18sp"
                 />
@@ -42,11 +43,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="20dp"
-            android:fontFamily="serif"
+            android:fontFamily="@font/sarabun"
             android:layout_marginEnd="20dp"
             android:text="Login"
             android:elevation="10dp"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="40sp"
             android:textStyle="bold"  />
 
@@ -60,7 +61,7 @@
                 android:fontFamily="serif"
                 android:text="@string/Logdetails"
 
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 
@@ -74,9 +75,9 @@
                 android:background="@drawable/input"
                 android:elevation="10dp"
                 android:hint="Email"
-                app:boxStrokeColor="@color/primary"
+                app:boxStrokeColor="@color/black"
                 android:layout_marginEnd="20dp"
-                android:textColorHint="@color/primary"
+                android:textColorHint="@color/black"
                 app:boxCornerRadiusBottomEnd="40dp"
                 app:boxCornerRadiusBottomStart="40dp"
                 app:boxCornerRadiusTopEnd="40dp"
@@ -85,13 +86,13 @@
                 app:counterEnabled="false"
                 app:counterMaxLength="16"
                 app:endIconMode="clear_text"
-                app:endIconTint="@color/primary"
+                app:endIconTint="@color/black"
                 app:errorEnabled="true"
-                app:hintTextColor="@color/primary"
+                app:hintTextColor="@color/black"
 
 
                 app:startIconDrawable="@drawable/email"
-                app:startIconTint="@color/primary">
+                app:startIconTint="@color/black">
                 >
 
                 <EditText
@@ -101,7 +102,7 @@
                     android:id="@+id/email"
                     android:paddingEnd="50dp"
                     android:background="@drawable/input"
-                    android:textColorHint="@color/primary"
+                    android:textColorHint="@color/white"
                      />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -117,7 +118,7 @@
                 android:elevation="10dp"
                 android:hint="Password"
                 android:layout_marginEnd="20dp"
-                android:textColorHint="@color/primary"
+                android:textColorHint="@color/black"
                 app:boxCornerRadiusBottomEnd="40dp"
                 app:boxCornerRadiusBottomStart="40dp"
                 app:boxCornerRadiusTopEnd="40dp"
@@ -126,13 +127,13 @@
                 app:counterEnabled="false"
                 app:counterMaxLength="16"
                 app:endIconMode="password_toggle"
-                app:endIconTint="@color/primary"
+                app:endIconTint="@color/black"
                 app:errorEnabled="true"
-                app:hintTextColor="@color/primary"
+                app:hintTextColor="@color/black"
 
-                app:boxStrokeColor="@color/primary"
+                app:boxStrokeColor="@color/black"
                 app:startIconDrawable="@drawable/baseline_key_24"
-                app:startIconTint="@color/primary">
+                app:startIconTint="@color/black">
 
                 <EditText
                     android:layout_width="match_parent"
@@ -141,7 +142,7 @@
                     android:inputType="textPassword"
                     android:background="@drawable/input"
                     android:paddingEnd="50dp"
-                    android:textColorHint="@color/primary" />
+                    android:textColorHint="@color/black" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
@@ -152,7 +153,7 @@
                 android:textStyle="bold"
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="32dp"
-                android:textColorLink="@color/primary" />
+                android:textColorLink="@color/white" />
 
             <CheckBox
                 android:id="@+id/checkBox"
@@ -163,10 +164,10 @@
                 android:backgroundTint="@color/black"
                 android:fontFamily="serif"
                 android:text=""
-                android:textColorLink="@color/primary"
-                app:buttonIconTint="@color/black"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
+                android:textColorLink="@color/white"
+                app:buttonIconTint="@color/white"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 
@@ -177,6 +178,7 @@
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_marginTop="40dp"
                 android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/white"
                 android:background="@drawable/roundbtn"
                 android:text="Login "
                 android:elevation="10dp"
@@ -186,7 +188,7 @@ android:onClick="login"
                 android:fontFamily="serif"
                 android:textStyle="bold"
                 android:textAllCaps="true"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="15sp">
 
             </androidx.appcompat.widget.AppCompatButton>
@@ -196,7 +198,7 @@ android:onClick="login"
                 android:id="@+id/progressBar"
                 android:visibility="gone"
                 android:layout_marginTop="40dp"
-                android:indeterminateTint="@color/primary"
+                android:indeterminateTint="@color/white"
                 android:layout_gravity="center"/>
 
 
@@ -207,10 +209,10 @@ android:onClick="login"
                 android:layout_marginBottom="20dp"
                 android:textAlignment="center"
                 android:layout_marginTop="20dp"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textStyle="bold"
                 android:fontFamily="serif"
-                android:textColorLink="@color/primary"
+                android:textColorLink="@color/white"
                 android:textSize="15sp"
                 android:text=""
                 android:onClick="signup" />

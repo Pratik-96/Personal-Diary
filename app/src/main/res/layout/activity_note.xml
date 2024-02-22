@@ -5,15 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
+    android:background="@color/black"
     tools:context=".Note"
     android:theme="@style/AppTheme.NoForceDark"
-    android:background="@drawable/bg">
+    >
 <RelativeLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:elevation="100dp"
     android:id="@+id/title"
-    android:backgroundTint="@color/white"
+    android:background="@color/black"
     >
     <TextView
         android:layout_width="wrap_content"
@@ -42,6 +43,7 @@
         app:tint="@color/white"
         android:src="@drawable/baseline_done_24" />
 </RelativeLayout>
+
 
     <LinearLayout
         android:id="@+id/edtNote"

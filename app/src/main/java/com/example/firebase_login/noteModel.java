@@ -1,20 +1,20 @@
 package com.example.firebase_login;
 
-import com.google.firebase.Timestamp;
+
 
 public class noteModel {
     String TITLE;
     String CONTEXT;
 
-    public Timestamp getTimestamp() {
+    public String getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp(Timestamp timestamp) {
+    public void setTimestamp(String timestamp) {
         this.timestamp = timestamp;
     }
 
-    com.google.firebase.Timestamp timestamp;
+    String timestamp;
 
     public noteModel() {
     }

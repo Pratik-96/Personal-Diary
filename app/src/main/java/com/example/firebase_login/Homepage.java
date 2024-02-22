@@ -9,12 +9,17 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.icu.text.SimpleDateFormat;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.firebase_login.databinding.ActivityHomepageBinding;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.firebase.ui.firestore.SnapshotParser;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
@@ -37,6 +42,7 @@ public class Homepage extends AppCompatActivity {
     FirebaseAuth mAuth;
 
     FloatingActionButton addNote;
+    ActivityHomepageBinding binding;
 
     RecyclerView.LayoutManager layoutManager;
 
@@ -46,6 +52,8 @@ public class Homepage extends AppCompatActivity {
     RecyclerView recyclerView;
 
     noteAdapter noteAdapter;
+
+    EditText search;
     ImageView logout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,19 +65,21 @@ public class Homepage extends AppCompatActivity {
         logout=findViewById(R.id.logout);
         addNote=findViewById(R.id.floatingActionButton);
         homepageTitle=findViewById(R.id.homepageTitle);
-        nodata=findViewById(R.id.nodata);
+        search = findViewById(R.id.search);
+
+
         Calendar c = Calendar.getInstance();
         int hrs = c.get(Calendar.HOUR_OF_DAY);
 
         if (hrs>=1 && hrs<=12)
         {
-            nodata.setText("Good Morning!!");
+            Toast.makeText(this, "Good Morning..!!", Toast.LENGTH_SHORT).show();
         } else if (hrs>12 && hrs<=16) {
-            nodata.setText("Good Afternoon!!");
+            Toast.makeText(this, "Good Afternoon!!", Toast.LENGTH_SHORT).show();
         }
         else
         {
-            nodata.setText("Good Evening!!");
+            Toast.makeText(this, "Good Evening!!", Toast.LENGTH_SHORT).show();
         }
         addNote.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,11 +98,55 @@ public class Homepage extends AppCompatActivity {
             }
         });  //Logout User
 
+
+        search.clearFocus();
+        search.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                filter_list(charSequence.toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+
         setUpRecyclerView();
 
 
     }
-    public void setUpRecyclerView() {
+
+    private void filter_list(String string) {
+
+        if (!string.isEmpty())
+        {
+            Query query = Utility.getCollectionRef().orderBy("timestamp").startAt(string);
+            FirestoreRecyclerOptions<noteModel> options = new FirestoreRecyclerOptions.Builder<noteModel>().setQuery(query, noteModel.class).build();
+//        layoutManager = new LinearLayoutManager(this);
+//        recyclerView.setLayoutManager(layoutManager);
+
+            GridLayoutManager gridLayoutManager = new GridLayoutManager(getApplicationContext(),2,GridLayoutManager.VERTICAL,false);
+            recyclerView.setLayoutManager(gridLayoutManager);
+            noteAdapter = new noteAdapter(options, this);
+
+            recyclerView.setAdapter(noteAdapter);
+            noteAdapter.notifyDataSetChanged();
+        }
+        else {
+            setUpRecyclerView();
+        }
+
+    }
+
+    public void setUpRecyclerView() { //TODO: Search view is not searching the document based on the date.
+
+
 
         Query query = Utility.getCollectionRef().orderBy("timestamp", Query.Direction.DESCENDING);
         FirestoreRecyclerOptions<noteModel> options = new FirestoreRecyclerOptions.Builder<noteModel>().setQuery(query, noteModel.class).build();
@@ -104,6 +158,7 @@ public class Homepage extends AppCompatActivity {
         noteAdapter = new noteAdapter(options, this);
 
         recyclerView.setAdapter(noteAdapter);
+        noteAdapter.notifyDataSetChanged();
 
     }
 

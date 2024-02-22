@@ -19,6 +19,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.firebase_login.databinding.ActivityMainBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
@@ -39,6 +40,8 @@ TextView reg;
 CheckBox chkbox;
 
 ProgressBar progressBar;
+
+ActivityMainBinding binding;
 
 Button button;
 FirebaseAuth mAuth;
@@ -90,6 +93,8 @@ TextInputLayout passly,mailly,cnfpassly;
 
             }
         });
+
+
         Pass1.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
