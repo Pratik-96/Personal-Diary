@@ -2,10 +2,10 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="primary">#0C134F</color>
-    <color name="written">#D4ADFC</color>
-    <color name="secondary">#F9E8C9</color>
-    <color name="tertiary">#1D267D</color>
-    <color name="Meow">#5C469C</color>
-    <color name="Meon">#9A7258BF</color>
+    <color name="primary">#2A0800</color>
+    <color name="written">#F4DBD8</color>
+    <color name="secondary">#775144</color>
+    <color name="tertiary">#8C7675</color>
+    <color name="Meow">#C09891</color>
+    <color name="Meon">#A6C09891</color>
 </resources>
