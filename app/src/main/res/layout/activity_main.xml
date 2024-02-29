@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/black"
+    android:background="@color/primary"
     android:layout_height="match_parent"
     android:theme="@style/AppTheme.NoForceDark"
     tools:context=".MainActivity" android:orientation="vertical">
@@ -28,11 +28,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginStart="32dp"
-            android:fontFamily="serif"
+            android:fontFamily="@font/rockwell"
             android:text="Get Started..!!"
-            android:textColor="@color/white"
+            android:textColor="@color/written"
             android:textSize="23sp"
-            android:textStyle="bold" />
+            />
 
 
         <TextView
@@ -41,11 +41,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="20dp"
-            android:fontFamily="serif"
+            android:fontFamily="@font/dancing_script"
             android:layout_marginEnd="20dp"
             android:text="Sign Up"
             android:elevation="10dp"
-            android:textColor="@color/white"
+            android:textColor="@color/written"
             android:textSize="40sp"
             android:textStyle="bold" />
 
@@ -56,10 +56,10 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
-            android:fontFamily="serif"
+            android:fontFamily="@font/rockwell"
             android:text="@string/signdetails"
 
-            android:textColor="@color/white"
+            android:textColor="@color/written"
             android:textSize="15sp"
             android:textStyle="bold" />
 
@@ -96,6 +96,7 @@
                 android:layout_width="match_parent"
                 android:id="@+id/name"
                 android:inputType="textPersonName"
+                android:backgroundTint="@color/Meow"
                 android:background="@drawable/input"
                 android:layout_height="wrap_content"
                 />
@@ -135,6 +136,7 @@
                 android:inputType="textEmailAddress"
                 android:paddingEnd="50dp"
                 android:background="@drawable/input"
+                android:backgroundTint="@color/Meow"
                 android:textColorHint="@color/black"
 
                  />
@@ -175,6 +177,7 @@
                 android:id="@+id/password"
                 android:paddingEnd="50dp"
                 android:inputType="textPassword"
+                android:backgroundTint="@color/Meow"
                 android:background="@drawable/input"
                 android:textColorHint="@color/black" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -187,6 +190,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginStart="20dp"
             android:background="@drawable/input"
+            android:backgroundTint="@color/Meow"
             android:clipToPadding="false"
             android:elevation="10dp"
             android:hint="Confirm Password"
@@ -213,6 +217,7 @@
                 android:id="@+id/cnfpass"
                 android:inputType="textPassword"
                 android:background="@drawable/input"
+                android:backgroundTint="@color/Meow"
                 android:paddingEnd="50dp"
 
                 android:layout_height="wrap_content"
@@ -226,12 +231,12 @@
             android:layout_marginLeft="32dp"
             android:layout_marginTop="20dp"
             android:backgroundTint="@color/white"
-            android:fontFamily="serif"
+            android:fontFamily="@font/rockwell"
             android:text=""
             android:textColorLink="@color/white"
             app:buttonIconTint="@color/white"
             android:textColor="@color/white"
-            android:textColorHint="@color/white"
+            android:textColorHint="@color/written"
             android:textSize="15sp"
             android:textStyle="bold"/>
 
@@ -245,13 +250,13 @@
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
             android:background="@drawable/roundbtn"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="@color/Meow"
             android:text="Sign Up "
             android:elevation="10dp"
             android:onClick="signup"
             android:textAlignment="center"
             android:stateListAnimator="@anim/animate"
-            android:fontFamily="serif"
+            android:fontFamily="@font/dancing_script"
             android:textStyle="bold"
             android:textAllCaps="true"
             android:textColor="@color/black"
@@ -272,11 +277,11 @@
             android:text=""
             android:layout_marginTop="20dp"
             android:textColorLink="@color/white"
-            android:fontFamily="serif"
+            android:fontFamily="@font/rockwell"
             android:onClick="register"
             android:layout_marginBottom="20dp"
             android:textAlignment="center"
-            android:textColor="@color/white" />
+            android:textColor="@color/written" />
 
     </LinearLayout>
 

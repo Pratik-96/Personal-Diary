@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="@color/primary"
     android:theme="@style/AppTheme.NoForceDark"
     tools:context=".Log_in">
 
@@ -32,8 +32,8 @@
                 android:textStyle="bold"
                 android:layout_marginLeft="32dp"
                 android:layout_marginTop="20dp"
-                android:textColor="@color/white"
-                android:fontFamily="serif"
+                android:textColor="@color/written"
+                android:fontFamily="@font/rockwell"
                 android:textSize="18sp"
                 />
 
@@ -43,13 +43,14 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="20dp"
-            android:fontFamily="@font/sarabun"
+            android:fontFamily="@font/dancing_script"
             android:layout_marginEnd="20dp"
             android:text="Login"
             android:elevation="10dp"
-            android:textColor="@color/white"
+            android:textColor="@color/written"
             android:textSize="40sp"
-            android:textStyle="bold"  />
+            android:textStyle="bold"
+            />
 
             <TextView
                 android:id="@+id/textView4"
@@ -58,10 +59,10 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="20dp"
-                android:fontFamily="serif"
+                android:fontFamily="@font/rockwell"
                 android:text="@string/Logdetails"
 
-                android:textColor="@color/white"
+                android:textColor="@color/written"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 
@@ -93,7 +94,6 @@
 
                 app:startIconDrawable="@drawable/email"
                 app:startIconTint="@color/black">
-                >
 
                 <EditText
                     android:inputType="textEmailAddress"
@@ -102,6 +102,7 @@
                     android:id="@+id/email"
                     android:paddingEnd="50dp"
                     android:background="@drawable/input"
+                    android:backgroundTint="@color/Meow"
                     android:textColorHint="@color/white"
                      />
             </com.google.android.material.textfield.TextInputLayout>
@@ -141,8 +142,9 @@
                     android:id="@+id/password"
                     android:inputType="textPassword"
                     android:background="@drawable/input"
+                    android:backgroundTint="@color/Meow"
                     android:paddingEnd="50dp"
-                    android:textColorHint="@color/black" />
+                    android:textColorHint="@color/white" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
@@ -167,7 +169,7 @@
                 android:textColorLink="@color/white"
                 app:buttonIconTint="@color/white"
                 android:textColor="@color/white"
-                android:textColorHint="@color/white"
+                android:textColorHint="@color/written"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 
@@ -178,14 +180,14 @@
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_marginTop="40dp"
                 android:layout_marginBottom="20dp"
-                android:backgroundTint="@color/white"
+                android:backgroundTint="@color/Meow"
                 android:background="@drawable/roundbtn"
                 android:text="Login "
                 android:elevation="10dp"
 android:onClick="login"
                 android:textAlignment="center"
                 android:stateListAnimator="@anim/animate"
-                android:fontFamily="serif"
+                android:fontFamily="@font/dancing_script"
                 android:textStyle="bold"
                 android:textAllCaps="true"
                 android:textColor="@color/black"
@@ -209,9 +211,9 @@ android:onClick="login"
                 android:layout_marginBottom="20dp"
                 android:textAlignment="center"
                 android:layout_marginTop="20dp"
-                android:textColor="@color/white"
+                android:textColor="@color/written"
                 android:textStyle="bold"
-                android:fontFamily="serif"
+                android:fontFamily="@font/rockwell"
                 android:textColorLink="@color/white"
                 android:textSize="15sp"
                 android:text=""

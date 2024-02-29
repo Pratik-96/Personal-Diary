@@ -7,7 +7,7 @@
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
     android:elevation="10dp"
-    android:backgroundTint="#B4FFFFFF"
+    android:backgroundTint="@color/Meon"
     android:theme="@style/AppTheme.NoForceDark"
     android:background="@drawable/round_note">
 
@@ -24,9 +24,9 @@
         android:textSize="20sp"
         android:id="@+id/title"
         android:text="title"
-        android:fontFamily="@font/sarabun"
+        android:fontFamily="@font/aloeverafont"
         android:layout_margin="15dp"
-        android:textColor="@color/black"
+        android:textColor="@color/written"
         android:textStyle="bold"
 
         />
@@ -34,23 +34,23 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_marginStart="5dp"
-        android:fontFamily="@font/sarabun"
+        android:fontFamily="@font/aloeverafont"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:text="Content"
         android:id="@+id/content"
         android:maxLines="2"
-        android:textColor="@color/black"
+        android:textColor="@color/written"
         android:ellipsize="end"
         android:textSize="18sp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="12sp"
-        android:textColor="@color/black"
+        android:textColor="@color/written"
         android:text="timestamp"
         android:gravity="right"
-        android:fontFamily="@font/sarabun"
+        android:fontFamily="@font/aloeverafont"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="5dp"
         android:id="@+id/timestamp"/>
