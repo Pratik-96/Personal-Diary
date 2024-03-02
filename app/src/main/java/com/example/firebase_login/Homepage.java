@@ -1,5 +1,6 @@
 package com.example.firebase_login;
 
+import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -54,15 +55,16 @@ public class Homepage extends AppCompatActivity {
     noteAdapter noteAdapter;
 
     EditText search;
-    ImageView logout;
+    ImageView profile;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_homepage);
         mAuth= FirebaseAuth.getInstance();
         user=mAuth.getCurrentUser();
         recyclerView=findViewById(R.id.recyclerView);
-        logout=findViewById(R.id.logout);
+        profile=findViewById(R.id.profile);
         addNote=findViewById(R.id.floatingActionButton);
         homepageTitle=findViewById(R.id.homepageTitle);
         search = findViewById(R.id.search);
@@ -87,13 +89,12 @@ public class Homepage extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), Note.class));
             }
         });
-        logout.setOnClickListener(new View.OnClickListener() {
+        profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                                mAuth.signOut();
-                                startActivity(new Intent(getApplicationContext(), Log_in.class));
-                                finish();
+                startActivity(new Intent(getApplicationContext(), Profile.class));
+
 
             }
         });  //Logout User

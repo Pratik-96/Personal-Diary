@@ -36,14 +36,14 @@
         <ImageView
             android:layout_width="35dp"
             android:layout_height="35dp"
-            android:id="@+id/logout"
+            android:id="@+id/profile"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="104dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
             app:tint="@color/white"
-            android:src="@drawable/baseline_logout_24" />
+            android:src="@drawable/person_focused" />
 
 
 
@@ -96,7 +96,6 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="-5dp"
         android:layout_marginEnd="0dp"
         android:layout_marginBottom="5dp" />
 
