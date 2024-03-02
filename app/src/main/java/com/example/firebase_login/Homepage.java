@@ -126,7 +126,7 @@ public class Homepage extends AppCompatActivity {
 
         if (!string.isEmpty())
         {
-            Query query = Utility.getCollectionRef().orderBy("timestamp").startAt(string);
+            Query query = Utility.getCollectionRef().whereEqualTo("timestamp",string.toLowerCase());
             FirestoreRecyclerOptions<noteModel> options = new FirestoreRecyclerOptions.Builder<noteModel>().setQuery(query, noteModel.class).build();
 //        layoutManager = new LinearLayoutManager(this);
 //        recyclerView.setLayoutManager(layoutManager);
@@ -136,6 +136,7 @@ public class Homepage extends AppCompatActivity {
             noteAdapter = new noteAdapter(options, this);
 
             recyclerView.setAdapter(noteAdapter);
+            noteAdapter.startListening();
             noteAdapter.notifyDataSetChanged();
         }
         else {
@@ -144,7 +145,7 @@ public class Homepage extends AppCompatActivity {
 
     }
 
-    public void setUpRecyclerView() { //TODO: Search view is not searching the document based on the date.
+    public void setUpRecyclerView() {
 
 
 
@@ -158,6 +159,7 @@ public class Homepage extends AppCompatActivity {
         noteAdapter = new noteAdapter(options, this);
 
         recyclerView.setAdapter(noteAdapter);
+        noteAdapter.startListening();
         noteAdapter.notifyDataSetChanged();
 
     }
