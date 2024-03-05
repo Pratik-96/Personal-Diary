@@ -10,7 +10,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/secondary"
+        android:background="@color/Meow"
         android:scrollbars="none">
         <LinearLayout
             android:layout_width="match_parent"
@@ -21,7 +21,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:background="@color/primary"
+                android:background="@color/secondary"
                 android:padding="16dp"
                 >
 
@@ -51,9 +51,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
-                        android:fontFamily="@font/sarabun"
+                        android:fontFamily="@font/dancing_script"
                         android:text="User_Name"
-                        android:textColor="@color/white"
+                        android:textColor="@color/tertiary"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
@@ -63,9 +63,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="10dp"
-                        android:fontFamily="@font/sarabun"
+                        android:fontFamily="@font/rockwell"
                         android:text="Email"
-                        android:textColor="@color/white"
+                        android:textColor="@color/tertiary"
                         android:textSize="15sp"
                         android:textStyle="bold" />
 
@@ -104,9 +104,9 @@
                     android:layout_margin="10dp"
                     android:drawableStart="@drawable/baseline_download_24"
                     android:drawablePadding="10dp"
-                    android:fontFamily="@font/sarabun"
+                    android:fontFamily="@font/rockwell"
                     android:text="Update Memoir"
-                    android:textColor="@color/white"
+                    android:textColor="@color/written"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -129,9 +129,9 @@
                     android:layout_margin="10dp"
                     android:drawableStart="@drawable/baseline_share_24"
                     android:drawablePadding="10dp"
-                    android:fontFamily="@font/sarabun"
+                    android:fontFamily="@font/rockwell"
                     android:text="Share"
-                    android:textColor="@color/white"
+                    android:textColor="@color/written"
                     android:textSize="20sp" />
             </LinearLayout>
             <View
@@ -151,9 +151,9 @@
                     android:layout_margin="10dp"
                     android:drawableStart="@drawable/baseline_feedback_24"
                     android:drawablePadding="10dp"
-                    android:fontFamily="@font/sarabun"
+                    android:fontFamily="@font/rockwell"
                     android:text="Feedback"
-                    android:textColor="@color/white"
+                    android:textColor="@color/written"
                     android:textSize="20sp" />
             </LinearLayout>
             <View
@@ -173,9 +173,9 @@
                     android:layout_margin="10dp"
                     android:drawableStart="@drawable/baseline_logout_24"
                     android:drawablePadding="10dp"
-                    android:fontFamily="@font/sarabun"
+                    android:fontFamily="@font/rockwell"
                     android:text="Logout"
-                    android:textColor="@color/white"
+                    android:textColor="@color/written"
                     android:textSize="20sp" />
             </LinearLayout>
             <View

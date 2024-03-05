@@ -41,10 +41,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="20dp"
-            android:fontFamily="@font/dancing_script"
             android:layout_marginEnd="20dp"
-            android:text="Sign Up"
             android:elevation="10dp"
+            android:fontFamily="@font/dancing_script"
+            android:text="Sign Up"
             android:textColor="@color/written"
             android:textSize="40sp"
             android:textStyle="bold" />
