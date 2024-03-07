@@ -42,7 +42,7 @@
             android:layout_marginStart="104dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
-            app:tint="@color/white"
+            app:tint="@color/written"
             android:src="@drawable/person_focused" />
 
 
@@ -108,7 +108,7 @@
         android:layout_marginEnd="20dp"
         android:elevation="100dp"
         android:layout_marginBottom="40dp"
-        app:backgroundTint="@color/white"
+        app:backgroundTint="@color/written"
         android:src="@drawable/edit"
         android:clickable="true"
          />
