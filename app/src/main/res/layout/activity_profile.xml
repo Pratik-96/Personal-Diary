@@ -50,10 +50,10 @@
                         android:id="@+id/name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:fontFamily="@font/dancing_script"
+                        android:layout_marginStart="25dp"
+                        android:fontFamily="@font/rockwell"
                         android:text="User_Name"
-                        android:textColor="@color/tertiary"
+                        android:textColor="@color/design_default_color_primary_dark"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
@@ -65,8 +65,8 @@
                         android:layout_marginTop="10dp"
                         android:fontFamily="@font/rockwell"
                         android:text="Email"
-                        android:textColor="@color/tertiary"
-                        android:textSize="15sp"
+                        android:textColor="@color/design_default_color_primary_dark"
+                        android:textSize="20sp"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -103,6 +103,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:drawableStart="@drawable/baseline_download_24"
+                    android:drawableTint="@color/written"
                     android:drawablePadding="10dp"
                     android:fontFamily="@font/rockwell"
                     android:text="Update Memoir"
@@ -130,6 +131,7 @@
                     android:drawableStart="@drawable/baseline_share_24"
                     android:drawablePadding="10dp"
                     android:fontFamily="@font/rockwell"
+                    android:drawableTint="@color/written"
                     android:text="Share"
                     android:textColor="@color/written"
                     android:textSize="20sp" />
@@ -151,6 +153,7 @@
                     android:layout_margin="10dp"
                     android:drawableStart="@drawable/baseline_feedback_24"
                     android:drawablePadding="10dp"
+                    android:drawableTint="@color/written"
                     android:fontFamily="@font/rockwell"
                     android:text="Feedback"
                     android:textColor="@color/written"
@@ -174,6 +177,7 @@
                     android:drawableStart="@drawable/baseline_logout_24"
                     android:drawablePadding="10dp"
                     android:fontFamily="@font/rockwell"
+                    android:drawableTint="@color/written"
                     android:text="Logout"
                     android:textColor="@color/written"
                     android:textSize="20sp" />
