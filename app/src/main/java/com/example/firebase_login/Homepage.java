@@ -127,7 +127,7 @@ public class Homepage extends AppCompatActivity {
 
         if (!string.isEmpty())
         {
-            Query query = Utility.getCollectionRef().whereEqualTo("timestamp",string.toLowerCase());
+            Query query = Utility.getCollectionRef().whereEqualTo("title",string.toLowerCase());
             FirestoreRecyclerOptions<noteModel> options = new FirestoreRecyclerOptions.Builder<noteModel>().setQuery(query, noteModel.class).build();
 //        layoutManager = new LinearLayoutManager(this);
 //        recyclerView.setLayoutManager(layoutManager);

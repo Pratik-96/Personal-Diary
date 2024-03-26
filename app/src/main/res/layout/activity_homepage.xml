@@ -4,28 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-
     android:background="@color/primary"
+
+    android:orientation="vertical"
     android:theme="@style/AppTheme.NoForceDark"
     tools:context=".Homepage">
+
     <RelativeLayout
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
         android:background="@color/primary"
-        android:elevation="10dp"
-        android:id="@+id/title"
-        >
+        android:elevation="10dp">
+
         <TextView
+            android:id="@+id/homepageTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginStart="20dp"
-            android:id="@+id/homepageTitle"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="104dp"
             android:fontFamily="@font/winter_market"
@@ -33,28 +34,28 @@
             android:textColor="@color/written"
             android:textSize="40sp"
             android:textStyle="bold" />
+
         <ImageView
+            android:id="@+id/profile"
             android:layout_width="35dp"
             android:layout_height="35dp"
-            android:id="@+id/profile"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="104dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
-            app:tint="@color/written"
-            android:src="@drawable/person_focused" />
-
-
+            android:src="@drawable/person_focused"
+            app:tint="@color/written" />
 
 
     </RelativeLayout>
+
     <View
+        android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:id="@+id/view"
         android:layout_below="@id/title"
-        android:background="@color/white"/>
+        android:background="@color/white" />
 
     <RelativeLayout
         android:id="@+id/ly"
@@ -62,28 +63,35 @@
 
         android:layout_height="wrap_content"
         android:layout_below="@id/view"
-        android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:background="@color/tertiary">
 
-        <EditText
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:textColor="@color/white"
+            app:endIconMode="clear_text"
+            app:hintEnabled="false"
+>
+        <EditText
             android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
             android:layout_alignParentTop="true"
-            android:fontFamily="@font/dancing_script"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
-            android:padding="5dp"
-            android:hint="Search date here.."
-            android:textColorHint="@color/written"
             android:layout_marginBottom="10dp"
             android:background="@drawable/round_note"
-            android:backgroundTint="@color/tertiary" />
+            android:backgroundTint="@color/tertiary"
+            android:fontFamily="@font/dancing_script"
+            android:hint="Search title here.."
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/written" />
+        </com.google.android.material.textfield.TextInputLayout>
     </RelativeLayout>
 
 
@@ -106,10 +114,9 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="20dp"
-        android:elevation="100dp"
         android:layout_marginBottom="40dp"
-        app:backgroundTint="@color/written"
-        android:src="@drawable/edit"
         android:clickable="true"
-         />
+        android:elevation="100dp"
+        android:src="@drawable/edit"
+        app:backgroundTint="@color/written" />
 </RelativeLayout>
