@@ -6,6 +6,9 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.icu.text.SimpleDateFormat;
@@ -70,6 +73,9 @@ public class Homepage extends AppCompatActivity {
         search = findViewById(R.id.search);
 
 
+
+
+
         Calendar c = Calendar.getInstance();
         int hrs = c.get(Calendar.HOUR_OF_DAY);
 
@@ -122,6 +128,8 @@ public class Homepage extends AppCompatActivity {
 
 
     }
+
+
 
     private void filter_list(String string) {
 
