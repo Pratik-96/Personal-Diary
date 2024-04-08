@@ -54,7 +54,7 @@
                         android:fontFamily="@font/rockwell"
                         android:text="User_Name"
                         android:textColor="@color/design_default_color_primary_dark"
-                        android:textSize="20sp"
+                        android:textSize="14sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -66,7 +66,7 @@
                         android:fontFamily="@font/rockwell"
                         android:text="Email"
                         android:textColor="@color/design_default_color_primary_dark"
-                        android:textSize="20sp"
+                        android:textSize="13sp"
                         android:textStyle="bold" />
 
                 </LinearLayout>

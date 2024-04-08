@@ -98,6 +98,7 @@
                 android:inputType="textPersonName"
                 android:backgroundTint="@color/Meow"
                 android:background="@drawable/input"
+                android:drawableTint="@color/written"
                 android:layout_height="wrap_content"
                 />
         </com.google.android.material.textfield.TextInputLayout>
@@ -136,6 +137,7 @@
                 android:inputType="textEmailAddress"
                 android:paddingEnd="50dp"
                 android:background="@drawable/input"
+                android:drawableTint="@color/written"
                 android:backgroundTint="@color/Meow"
                 android:textColorHint="@color/black"
 
@@ -179,6 +181,7 @@
                 android:inputType="textPassword"
                 android:backgroundTint="@color/Meow"
                 android:background="@drawable/input"
+                android:drawableTint="@color/written"
                 android:textColorHint="@color/black" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -217,6 +220,7 @@
                 android:id="@+id/cnfpass"
                 android:inputType="textPassword"
                 android:background="@drawable/input"
+                android:drawableTint="@color/written"
                 android:backgroundTint="@color/Meow"
                 android:paddingEnd="50dp"
 
